@@ -13,6 +13,10 @@
   --logo-color-text: #101010;
   --logo-color-circle: #101010;
 
+  // Overview
+
+  --overview-bg-color: #1d1e25;
+
   // Primary colors
 
   --primary-color-50: #4e7ddb;
@@ -21,6 +25,14 @@
 
   --container-padding: 15px;
   --container-width: 1200px;
+
+  @include mini-desktop {
+    --container-width: 1000px;
+  }
+
+  @include tablet {
+    --container-width: 860px;
+  }
 
   @include mobile {
     --container-width: 480px;
@@ -45,4 +57,5 @@
   --neutral-color-140: #ffffff;
   --logo-color-text: #ffffff;
   --logo-color-circle: #343542;
+  --overview-bg-color: #18181d;
 }
