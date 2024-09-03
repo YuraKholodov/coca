@@ -1,8 +1,11 @@
 .strength {
-  padding: 66px 0 160px;
+  &__container {
+    border-bottom: 1px solid var(--neutral-color-30);
+    padding: 66px 0 160px;
 
-  @include mobile {
-    padding: 20px 0 70px;
+    @include mobile {
+      padding: 20px 0 70px;
+    }
   }
 
   &__list {
