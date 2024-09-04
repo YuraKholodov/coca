@@ -1,20 +1,24 @@
 <section class="features">
   <div class="container features__container">
     <div class="features__left">
-      <img
-        loading="lazy"
-        width="585"
-        height="651"
-        src="./assets/images/features-img.jpg"
-        alt="Woman typing on laptop"
-      />
+      <picture>
+        <source srcset="./img/features-img.avif" type="image/avif" />
+        <source srcset="./img/features-img.webp" type="image/webp" />
+        <img
+          loading="lazy"
+          width="585"
+          height="651"
+          src="./img/features-img.jpg"
+          alt="Woman typing on laptop"
+        />
+      </picture>
       <div class="features__stats">
         <div class="features__stats-head">
           <h4 class="features__stats-title text-p-default">Statictic</h4>
           <img
             width="18"
             height="22"
-            src="./assets/icons/more-icon.svg"
+            src="./img/svgicons/more-icon.svg"
             alt="More icon"
           />
         </div>
@@ -23,7 +27,7 @@
             loading="lazy"
             width="95"
             height="88"
-            src="./assets/icons/features-total-income.svg"
+            src="./img/svgicons/features-total-income.svg"
             alt="Total income"
           />
           <div class="features__stats-item-info">
@@ -58,7 +62,7 @@
             loading="lazy"
             width="95"
             height="88"
-            src="./assets/icons/features-total-expense.svg"
+            src="./img/svgicons/features-total-expense.svg"
             alt="Total expends"
           />
           <div class="features__stats-item-info">
