@@ -1,0 +1,36 @@
+.button {
+  &-form {
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    transition: var(--transition);
+
+    @include mobile {
+      font-size: 14px;
+    }
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+.swiper-control {
+  position: absolute;
+  left: 50%;
+  top: calc(var(--insight-article-img-height) / 2);
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  z-index: 10;
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: var(--neutral-color-60);
+  }
+}
