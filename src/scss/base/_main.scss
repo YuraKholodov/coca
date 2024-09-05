@@ -73,6 +73,12 @@ label {
   max-width: calc(var(--container-width) + (var(--container-padding) * 2));
 }
 
+.container-fluid {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 .hidden {
   font-size: 0;
   opacity: 0;

@@ -1,7 +1,13 @@
 .insight {
   &__container {
     border-top: 1px solid var(--neutral-color-30);
-    padding: 160px 0 90px;
+    padding-top: 160px;
+    padding-bottom: 90px;
+
+    @include small-tablet {
+      padding-top: 86px;
+      padding-bottom: 86px;
+    }
   }
 
   &__title {
@@ -24,8 +30,7 @@
     &-img {
       margin-bottom: 16px;
       width: 100%;
-      height: 100%;
-      max-height: var(--insight-article-img-height);
+      height: var(--insight-article-img-height);
       object-fit: cover;
       object-position: center;
     }

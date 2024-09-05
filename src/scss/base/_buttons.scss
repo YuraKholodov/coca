@@ -33,4 +33,8 @@
   .swiper-button-next {
     color: var(--neutral-color-60);
   }
+
+  @include mobile {
+    display: none;
+  }
 }
