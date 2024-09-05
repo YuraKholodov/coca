@@ -23,18 +23,64 @@
   top: calc(var(--insight-article-img-height) / 2);
   transform: translate(-50%, -50%);
   overflow: hidden;
-  border-radius: 50%;
+  border-radius: 40px;
   width: 80px;
   height: 80px;
   background-color: #fff;
   z-index: 10;
+  transition: 0.5s;
+
+  &:hover {
+    width: 160px;
+  }
 
   .swiper-button-prev,
   .swiper-button-next {
     color: var(--neutral-color-60);
+    width: 45%;
   }
 
   @include mobile {
     display: none;
+  }
+}
+
+.testimonials {
+  &__btns {
+    position: relative;
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+    transform: translateY(-40px);
+    z-index: var(--z-index-1);
+
+    @include mobile {
+      justify-content: center;
+      transform: translateY(10px);
+    }
+  }
+
+  &__btn-prev,
+  &__btn-next {
+    @include flex-all-center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--neutral-color-100);
+
+    svg path {
+      fill: var(--neutral-color-10);
+    }
+
+    &.swiper-button-disabled {
+      border: 1px solid var(--neutral-color-40);
+      background-color: transparent;
+
+      svg {
+        path {
+          fill: var(--neutral-color-40);
+        }
+      }
+    }
   }
 }
