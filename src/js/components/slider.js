@@ -20,21 +20,21 @@ export const insightSlider = () => {
 };
 
 export const partnersSlider = () => {
-  const windowWidth = window.screen.width;
-  console.log(windowWidth);
-  if (windowWidth > 576) return;
+  const clientWidth = document.documentElement.clientWidth;
+  if (clientWidth > 576) return;
 
-  const partnersSlider = document.querySelector(".partners__list");
-  const partnersWrapper = partnersSlider.querySelector(".partners__wrapper");
+  const partnersSlider = document.querySelector(".partners__slider");
+  const partnersWrapper = partnersSlider.querySelector(".partners__list");
   const partnersItems = partnersSlider.querySelectorAll(".partners__item");
   partnersWrapper.classList.add("swiper-wrapper");
   partnersItems.forEach((item) => {
     item.classList.add("swiper-slide");
   });
 
-  new Swiper(".partners__list", {
+  new Swiper(".partners__slider", {
     slidesPerView: 1,
     spaceBetween: 20,
+    loop: true,
 
     autoplay: {
       delay: 5000,

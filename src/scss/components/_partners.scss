@@ -1,6 +1,5 @@
 .partners {
   padding: 86px 0;
-  overflow: hidden;
 
   @include mobile {
     padding: 66px 0;
@@ -33,11 +32,12 @@
     }
   }
 
-  &__list {
+  &__slider {
     width: 100%;
+    overflow: hidden;
   }
 
-  &__wrapper {
+  &__list {
     @include flex-all-center;
     gap: 10px 30px;
     flex-wrap: wrap;
@@ -46,6 +46,16 @@
       all: unset;
     }
   }
+
+  // &__wrapper {
+  //   @include flex-all-center;
+  //   gap: 10px 30px;
+  //   flex-wrap: wrap;
+
+  //   @include mobile {
+  //     all: unset;
+  //   }
+  // }
 
   &__item {
     display: flex !important;
