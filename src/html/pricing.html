@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Head -->
+  @@include('./base/head.html', {'title':'Home', 'style':'pricing'})
+  <body class="body" data-theme="light">
+    <!-- Header -->
+    @@include('./components/header.html', {'page_name': 'Pricing'})
+    <!-- Hero -->
+    @@include('./components/pricing/hero.html')
+
+    <!-- Footer -->
+    @@include('./components/footer.html')
+    <script type="module" src="./js/pricing.bundle.js"></script>
+  </body>
+</html>

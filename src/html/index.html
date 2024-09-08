@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <!-- Head -->
-  @@include('./base/head.html', {'title':'Home'})
+  @@include('./base/head.html', {'title':'Home', 'style':'main'})
   <body class="body" data-theme="light">
     <!-- Header -->
-    @@include('./components/header.html')
+    @@include('./components/header.html', {'page_name': 'Home'})
     <!-- Hero -->
     @@include('./components/home/hero.html')
     <!-- Overview -->

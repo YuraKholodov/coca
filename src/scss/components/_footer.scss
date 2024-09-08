@@ -55,7 +55,7 @@
     }
 
     &:hover svg path {
-      fill: #7e8492;
+      fill: var(--neutral-color-150);
     }
   }
 
@@ -88,7 +88,7 @@
     &-descr {
       font-weight: 500;
       line-height: 1.6;
-      color: #7e8492;
+      color: var(--neutral-color-150);
       max-width: 292px;
 
       @include tablet {
@@ -133,7 +133,26 @@
       line-height: 1.5;
       color: #fff;
       margin-bottom: 24px;
+
+      @include mobile {
+        cursor: pointer;
+      }
     }
+  }
+
+  &__sublist {
+    @include mobile {
+      overflow: hidden;
+      opacity: 0;
+      visibility: hidden;
+      height: 0;
+      transition: var(--transition);
+    }
+  }
+
+  .footer__item--active .footer__sublist {
+    opacity: 1;
+    visibility: visible;
   }
 
   &__subitem {
@@ -146,7 +165,7 @@
       display: inline-block;
       font-weight: 400;
       line-height: 1.5;
-      color: #7e8492 !important;
+      color: var(--neutral-color-150) !important;
 
       &::after {
         content: "";
@@ -155,7 +174,7 @@
         left: 0;
         bottom: -3px;
         height: 1px;
-        background-color: #7e8492;
+        background-color: var(--neutral-color-150);
         opacity: 0;
         visibility: hidden;
         transition: var(--transition);
@@ -216,7 +235,7 @@
         left: 0;
         bottom: -3px;
         height: 1px;
-        background-color: #7e8492;
+        background-color: var(--neutral-color-150);
         opacity: 0;
         visibility: hidden;
         transition: var(--transition);

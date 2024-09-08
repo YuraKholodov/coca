@@ -83,14 +83,14 @@
         font-weight: 500;
         font-size: 10px;
         line-height: 1.5;
-        color: #7e8492;
+        color: var(--neutral-color-150);
       }
 
       &-descr {
         max-width: 135px;
         font-weight: 400;
         font-size: 8px;
-        color: #7e8492;
+        color: var(--neutral-color-150);
       }
 
       &-price {
@@ -146,7 +146,7 @@
     max-width: 360px;
     font-weight: 500;
     line-height: 1.8;
-    color: #7e8492;
+    color: var(--neutral-color-150);
 
     @include mini-desktop {
       max-width: 700px;
