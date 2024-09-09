@@ -1,12 +1,24 @@
 .hero {
   padding: 90px 0 78px;
 
+  @include mobile {
+    padding: 45px 0 35px;
+  }
+
   &__head {
     margin: 0 auto;
     text-align: center;
     width: 100%;
     max-width: 903px;
     padding-bottom: 186px;
+
+    @include tablet {
+      padding-bottom: 90px;
+    }
+
+    @include mobile {
+      padding-bottom: 45px;
+    }
   }
 
   &__title {
@@ -73,13 +85,35 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0 32px;
+    gap: 32px;
+
+    @include tablet {
+      grid-template-columns: minmax(300px, 378px);
+      justify-content: center;
+    }
   }
 
   &__item {
     padding: 40px 24px;
     border: 1px solid var(--neutral-color-30);
     border-radius: 16px;
+
+    &-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    &-best-offers {
+      border-radius: 100px;
+      padding: 6px 12px;
+      background-color: var(--primary-color-30);
+
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.4;
+      color: #fff;
+    }
 
     &-btn {
       display: block;
@@ -91,6 +125,11 @@
       border-radius: 100px;
       padding: 16px 32px;
       margin: 0 auto;
+      transition: var(--transition);
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
 
     &-icon {
@@ -141,6 +180,35 @@
         line-height: 1.5;
         color: var(--neutral-color-100);
         margin-bottom: 16px;
+      }
+    }
+
+    &--dark {
+      transform: translateY(-76px);
+      border: 1px solid #1463ff;
+      box-shadow: 0 16px 24px 0 rgba(30, 30, 30, 0.08);
+      background-color: var(--neutral-color-90);
+
+      @include tablet {
+        transform: unset;
+        grid-row: 1 / 2;
+      }
+
+      .hero__item-icon {
+        background-color: var(--primary-color-30);
+      }
+
+      .hero__item-list-title,
+      .hero__item-title,
+      .hero__item-price,
+      .hero__item-price-text,
+      .hero__plans-item:not(.hero__plans-item--disabled) {
+        color: #fff;
+      }
+
+      .hero__item-btn {
+        color: #1d1e25;
+        background-color: #fff;
       }
     }
   }
