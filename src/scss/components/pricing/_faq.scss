@@ -1,0 +1,93 @@
+.faq {
+  padding: 82px 0 160px;
+
+  @include tablet {
+    padding: 40px 0 80px;
+  }
+
+  &__container {
+    max-width: 1114px;
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+    margin-bottom: 24px;
+  }
+
+  &__descr {
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.8;
+    color: var(--neutral-color-150);
+    margin-bottom: 80px;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__accordion {
+    border-bottom: 1px solid var(--neutral-color-30);
+
+    &:not(:last-child) {
+      margin-bottom: 56px;
+
+      @include tablet {
+        margin-bottom: 30px;
+      }
+    }
+
+    &-control {
+      @include flex-all-between;
+      gap: 15px;
+      list-style: none;
+      margin-bottom: 16px;
+      cursor: pointer;
+    }
+
+    &-title {
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--neutral-color-100);
+      margin-bottom: 32px;
+    }
+
+    &-icon {
+      position: relative;
+      width: 24px;
+      height: 24px;
+
+      &::after,
+      &::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        right: 0;
+        width: 18px;
+        height: 3px;
+        border-radius: 4px;
+        background-color: var(--neutral-color-100);
+      }
+
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+
+    &[open] &-icon::after {
+      display: none;
+    }
+
+    &-text {
+      max-width: 641px;
+      font-weight: 500;
+      line-height: 1.8;
+      color: var(--neutral-color-150);
+      margin-bottom: 32px;
+    }
+  }
+}
