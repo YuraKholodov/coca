@@ -1,0 +1,150 @@
+.hero {
+  padding: 90px 0 40px;
+
+  @include mobile {
+    padding: 40px 0 20px;
+  }
+
+  &__title {
+    max-width: 741px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+    margin-bottom: 100px;
+
+    @include mini-desktop {
+      margin-bottom: 60px;
+    }
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px 30px;
+
+    @include mini-desktop {
+      flex-direction: column;
+    }
+  }
+
+  &__map {
+    height: 544px;
+    width: 100%;
+    max-width: 986px;
+
+    @include mobile {
+      height: 300px;
+    }
+  }
+
+  &__contacts {
+    max-width: 176px;
+
+    @include mini-desktop {
+      max-width: unset;
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    @include mobile {
+      gap: 20px;
+    }
+
+    @include small-tablet {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &-item {
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--neutral-color-50);
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+
+      @include mini-desktop {
+        margin-bottom: unset;
+
+        &:not(:last-child) {
+          margin-bottom: unset;
+        }
+      }
+
+      &-title {
+        font-weight: 700;
+        line-height: 1.3;
+        color: var(--neutral-color-100);
+        margin-bottom: 8px;
+      }
+
+      &-descr {
+        font-weight: 400;
+        line-height: 1.5;
+        color: var(--neutral-color-150);
+        margin-bottom: 20px;
+      }
+
+      &-link {
+        font-weight: 500;
+        line-height: 1.6;
+        color: var(--neutral-color-100);
+      }
+    }
+  }
+}
+
+/* Маркеры */
+
+.marker-container {
+  position: relative;
+}
+
+.marker-descr {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  transform: translate(-50%, -100%);
+  border-radius: 8px;
+  padding: 12px 16px;
+  width: 180px;
+  box-shadow: 0 16px 24px 0 rgba(30, 30, 30, 0.08);
+  background: #fff;
+
+  &__title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.42857;
+    text-align: center;
+    color: var(--neutral-color-90);
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--neutral-color-150);
+  }
+}
+
+.ymaps3x0--marker {
+  img {
+    max-width: inherit;
+  }
+}
+
+.my-marker {
+  transform: translate(-50%, calc(-50% - 24px));
+  cursor: pointer;
+}
+
+.ymaps3x0--map-copyrights {
+  display: none !important;
+}

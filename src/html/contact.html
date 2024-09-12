@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Head -->
+  @@include('./base/head.html', {'title':'Contact', 'style':'contact'})
+  <script src="https://api-maps.yandex.ru/v3/?apikey=c3994120-b30e-45ea-966f-4174f04e971d&lang=ru_RU"></script>
+
+  <body class="body" data-theme="light">
+    <!-- Header -->
+    @@include('./components/header.html', {'page_name': 'Contact'})
+    <!-- Hero -->
+    @@include('./components/contact/hero.html')
+    <!-- Partners -->
+    @@include('./components/partners.html')
+
+    <!-- Footer -->
+    @@include('./components/footer.html')
+    
+    <script type="module" src="./js/contact.bundle.js"></script>
+  </body>
+</html>

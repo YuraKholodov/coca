@@ -1,0 +1,18 @@
+@import "./base/reset";
+@import "./base/fontsAutoGen";
+@import "./base/flex";
+@import "./base/media";
+@import "./base/vars";
+@import "./base/main";
+@import "./base/text";
+@import "./base/buttons";
+@import "./base/burger";
+
+// Components
+
+@import "./components/header";
+
+@import "./components/contact/hero";
+@import "./components/partners";
+
+@import "./components/footer";

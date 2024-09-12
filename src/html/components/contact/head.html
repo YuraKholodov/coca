@@ -1,0 +1,24 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/@@style.css" />
+  <script src="https://api-maps.yandex.ru/v3/?apikey=c3994120-b30e-45ea-966f-4174f04e971d&lang=ru_RU"></script>
+  <script>
+    async function initMap() {
+      await ymaps3.import;
+
+      const { YMap, YMapDefaultSchemeLayer } = ymaps3;
+
+      const map = new YMap(document.getElementById("map"), {
+        location: {
+          center: [37.588144, 55.733842],
+          zoom: 10,
+        },
+      });
+
+      map.addChild(new YMapDefaultSchemeLayer());
+    }
+    initMap();
+  </script>
+  <title>Coca - @@title</title>
+</head>
