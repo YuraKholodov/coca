@@ -5,6 +5,7 @@ import { footerAccordion } from "./components/footer-accordion.js";
 import { initMap } from "./components/contact/map.js";
 import { partnersSlider } from "./components/slider.js";
 import { phone } from "./components/contact/phone.js";
+import { formValidators } from "./components/contact/form-validator.js";
 
 useTheme();
 useBurger();
@@ -13,3 +14,4 @@ footerAccordion();
 initMap();
 partnersSlider();
 phone();
+formValidators();

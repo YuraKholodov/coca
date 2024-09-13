@@ -8,34 +8,34 @@
           >hellosansbrothers@gmail.com</a
         >
       </p>
-      <form class="started__form">
+      <form class="started__form" id="started__form">
         <div class="started__form-top">
           <label class="started__form-label text-p-small">
             First name
             <input
+              id="first-name"
               type="text"
               class="started__form-input"
               placeholder="First name"
-              required
             />
           </label>
           <label class="started__form-label text-p-small">
             Last name
             <input
+              id="last-name"
               type="text"
               class="started__form-input"
               placeholder="Last name"
-              required
             />
           </label>
         </div>
         <label class="started__form-label text-p-small">
           Email
           <input
+            id="email"
             type="email"
             class="started__form-input"
             placeholder="you@company.com"
-            required
           />
         </label>
         <label class="started__form-label text-p-small">
@@ -45,18 +45,22 @@
             type="tel"
             class="started__form-input"
             placeholder="+1 (555) 000-0000"
-            required
           />
         </label>
         <label class="started__form-label text-p-small">
           Message
           <textarea
+            id="message"
             class="started__form-input started__form-input--textarea"
             placeholder="Leave us a message..."
-            required
           ></textarea>
         </label>
-        <button class="started__form-btn text-p-default button-form" type="submit">Get Started</button>
+        <button
+          class="started__form-btn text-p-default button-form"
+          type="submit"
+        >
+          Get Started
+        </button>
       </form>
     </div>
     <picture>
