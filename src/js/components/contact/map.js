@@ -1,4 +1,7 @@
 export async function initMap() {
+  const useTheme = document.querySelector("body").dataset.theme;
+  const waterColor = useTheme == "light" ? "#fff" : "#1d1e25";
+
   // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
   await ymaps3.ready;
 
@@ -30,9 +33,30 @@ export async function initMap() {
       // Делаем прозрачными все геометрии водных объектов.
       {
         tags: {
-          any: ["water", "geographic_line"],
+          all: ["water"],
         },
-        elements: ["geometry", "label"],
+        elements: ["geometry"],
+        stylers: [
+          {
+            color: waterColor,
+          },
+        ],
+      },
+      {
+        tags: {
+          any: ["water"],
+        },
+        elements: ["label"],
+        stylers: [
+          {
+            visibility: "off",
+          },
+        ],
+      },
+      {
+        tags: {
+          all: ["geographic_line"],
+        },
         stylers: [
           {
             visibility: "off",

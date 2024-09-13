@@ -1,21 +1,29 @@
+import { initMap } from "./contact/map.js";
+
 export function useTheme() {
-  const themeTarget = document.querySelector('[data-theme]');
-  const themeSwitcher = document.querySelector('[data-theme-switcher]');
-  const theme = localStorage.getItem('theme') || 'light';
+  const themeTarget = document.querySelector("[data-theme]");
+  const themeSwitcher = document.querySelector("[data-theme-switcher]");
+  const theme = localStorage.getItem("theme") || "light";
   const themeTargetDataset = themeTarget.dataset;
   themeTargetDataset.theme = theme;
 
-  if (theme == 'dark') {
+  if (theme == "dark") {
     themeSwitcher.checked = true;
   }
 
-  themeSwitcher.addEventListener('click', () => {
-    if (themeTargetDataset.theme == 'light') {
-      themeTargetDataset.theme = 'dark';
-      localStorage.setItem('theme', 'dark');
+  themeSwitcher.addEventListener("click", () => {
+    if (themeTargetDataset.theme == "light") {
+      themeTargetDataset.theme = "dark";
+      localStorage.setItem("theme", "dark");
     } else {
-      themeTargetDataset.theme = 'light';
-      localStorage.setItem('theme', 'light');
+      themeTargetDataset.theme = "light";
+      localStorage.setItem("theme", "light");
+    }
+
+    const mapElem = document.querySelector("#map");
+    if (mapElem) {
+      mapElem.innerHTML = "";
+      initMap();
     }
   });
 }

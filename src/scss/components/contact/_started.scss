@@ -1,0 +1,125 @@
+.started {
+  padding: 70px 0 160px;
+
+  @include tablet {
+    padding: 30px 0 80px;
+  }
+
+  &__container {
+    position: relative;
+    max-width: 1440px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 0;
+
+    @include tablet {
+      padding-right: var(--container-padding);
+    }
+  }
+
+  &__form {
+    &-wrapper {
+      position: absolute;
+      left: 6%;
+      border: 1px solid var(--neutral-color-40);
+      padding: 56px 48px;
+      background-color: #fff;
+      width: 100%;
+      max-width: 608px;
+
+      @include tablet {
+        left: var(--container-padding);
+      }
+
+      @include small-tablet {
+        position: static;
+        max-width: unset;
+      }
+
+      @include mobile {
+        padding: 20px;
+      }
+    }
+
+    &-title {
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: #1d1e25;
+      margin-bottom: 20px;
+    }
+
+    &-text {
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--neutral-color-150);
+      margin-bottom: 48px;
+    }
+
+    &-link {
+      font-weight: 500;
+      color: var(--primary-color-30);
+    }
+  }
+
+  &__form {
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 0 32px;
+
+      @include mobile {
+        flex-direction: column;
+        margin-bottom: 24px;
+      }
+    }
+
+    &-label {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      font-weight: 500;
+      line-height: 1.4;
+      color: #1d1e25;
+
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+
+    &-input {
+      width: 100%;
+      margin-top: 8px;
+      border: 1px solid var(--neutral-color-30);
+      border-radius: 8px;
+      padding: 10px 14px;
+
+      font-weight: 400;
+      line-height: 1.7;
+
+      &::placeholder {
+        color: var(--neutral-color-150);
+      }
+
+      &--textarea {
+        height: 134px;
+        outline: none;
+        resize: none;
+      }
+    }
+
+    &-btn {
+      padding: 16px 32px;
+      background: #1d1e25;
+      color: #ffffff;
+    }
+  }
+
+  &__img {
+    @include small-tablet {
+      display: none;
+    }
+  }
+}
