@@ -66,6 +66,10 @@
   --z-index-2: 2;
   --z-index-3: 3;
   --z-index-4: 4;
+
+  // Images
+
+  --about-hero-subtitle-img: url("./../../../img/svgicons/linked_path-dark.svg");
 }
 
 [data-theme="dark"] {
@@ -76,6 +80,7 @@
   --logo-color-text: #ffffff;
   --logo-color-circle: #343542;
   --overview-bg-color: #18181d;
+  --about-hero-subtitle-img: url("./../../../img/svgicons/linked_path-light.svg");
 }
 
 .iti {

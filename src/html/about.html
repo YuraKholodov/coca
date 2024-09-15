@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Head -->
+  @@include('./base/head.html', {'title':'About', 'style':'about'})
+
+  <body class="body" data-theme="light">
+    <!-- Header -->
+    @@include('./components/header.html', {'page_name': 'About'})
+    <!-- Hero -->
+    @@include('./components/about/hero.html')
+    
+
+    <!-- Footer -->
+    @@include('./components/footer.html')
+    
+    <script type="module" src="./js/about.bundle.js"></script>
+  </body>
+</html>
