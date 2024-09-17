@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Head -->
+  @@include('./base/head.html', {'title':'Activity & Updates',
+  'style':'activity'})
+
+  <body class="body" data-theme="light">
+    <!-- Header -->
+    @@include('./components/header.html', {'page_name': 'Activity & Updates'})
+    <!-- Hero -->
+    @@include('./components/activity/hero.html')
+
+    <!-- Footer -->
+    @@include('./components/footer.html')
+
+    <script type="module" src="./js/activity.bundle.js"></script>
+  </body>
+</html>

@@ -82,7 +82,7 @@
     transform: translateY(8px);
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 2px;
       left: 3px;
@@ -126,7 +126,9 @@
 .nav {
   &__list {
     @include flex-align-center;
-    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 32px;
 
     @include small-tablet {
       gap: 10px;
@@ -146,7 +148,7 @@
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       right: 0;
       bottom: -3px;

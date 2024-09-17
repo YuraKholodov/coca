@@ -96,6 +96,7 @@
   &__slider {
     height: 629px;
     margin-bottom: 165px;
+    overflow: visible !important;
 
     @include mini-desktop {
       height: 600px;
