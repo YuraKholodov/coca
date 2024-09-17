@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <!-- Head -->
-  @@include('./base/head.html', {'title':'Activity & Updates',
-  'style':'activity'})
+  @@include('./base/head.html', {'title':'Blog',
+  'style':'blog'})
 
   <body class="body" data-theme="light">
     <!-- Header -->
     @@include('./components/header.html', {'page_name': 'Activity & Updates'})
     <!-- Hero -->
-    @@include('./components/activity/hero.html')
+    @@include('./components/blog/hero.html')
+    <!-- Posts -->
+    @@include('./components/blog/posts.html')
 
     <!-- Footer -->
     @@include('./components/footer.html')
 
-    <script type="module" src="./js/activity.bundle.js"></script>
+    <script type="module" src="./js/blog.bundle.js"></script>
   </body>
 </html>

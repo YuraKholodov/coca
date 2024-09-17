@@ -1,0 +1,104 @@
+.posts {
+  padding: 120px 0;
+  background-color: var(--overview-bg-color);
+
+  @include tablet {
+    padding: 80px 0;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 32px;
+
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    gap: 160px;
+
+    @include tablet {
+      gap: 80px;
+    }
+
+    &:nth-child(2n + 1) {
+      .article:nth-child(2n) {
+        height: 747px;
+
+        @include tablet {
+          height: 650px;
+        }
+
+        @include small-tablet {
+          height: 100%;
+        }
+      }
+      .article:nth-child(2n + 1) {
+        height: 991px;
+
+        @include tablet {
+          height: 800px;
+        }
+
+        @include small-tablet {
+          height: 100%;
+        }
+      }
+    }
+
+    &:nth-child(2n) {
+      .article:nth-child(2n + 1) {
+        height: 747px;
+
+        @include tablet {
+          height: 650px;
+        }
+
+        @include small-tablet {
+          height: 100%;
+        }
+      }
+
+      .article:nth-child(2n) {
+        height: 991px;
+
+        @include tablet {
+          height: 800px;
+        }
+
+        @include small-tablet {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__title {
+    font-weight: 600;
+    line-height: 1.2;
+    color: #fff;
+    margin: 24px 0;
+  }
+
+  &__text {
+    font-weight: 500;
+    line-height: 1.8;
+    color: var(--neutral-color-150);
+  }
+}
