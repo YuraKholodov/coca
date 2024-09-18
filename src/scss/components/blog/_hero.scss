@@ -1,5 +1,6 @@
 .hero {
   padding: 95px 0 168px;
+  overflow: hidden;
 
   @include mini-desktop {
     padding: 70px 0 140px;
@@ -96,6 +97,10 @@
         color: var(--neutral-color-150);
       }
     }
+  }
+
+  &__slider {
+    overflow: visible !important;
   }
 
   &__slider-control {

@@ -54,16 +54,3 @@ export const testimonialsSlider = () => {
     },
   });
 };
-
-export const activitySlider = () => {
-  new Swiper(".activity__slider", {
-    slidesPerView: 1,
-    spaceBetween: 200,
-
-    // Navigation arrows
-    navigation: {
-      nextEl: ".testimonials__btn-next",
-      prevEl: ".testimonials__btn-prev",
-    },
-  });
-};

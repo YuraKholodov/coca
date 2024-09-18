@@ -22,3 +22,24 @@ export const activitySlider = () => {
   });
   return activity;
 };
+
+export const articlesSlider = () => {
+  new Swiper(".artic__swiper", {
+    slidesPerView: 1,
+    spaceBetween: 32,
+    navigation: {
+      nextEl: ".artic__btn-next",
+      prevEl: ".artic__btn-prev",
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 32,
+      },
+      1200: {
+        slidesPerView: 2.5,
+        spaceBetween: 32,
+      },
+    },
+  });
+};
