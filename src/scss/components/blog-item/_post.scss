@@ -37,24 +37,24 @@
       width: 56px;
       height: 56px;
     }
-  }
 
-  &-name {
-    font-weight: 600;
-    line-height: 1.4;
-    color: var(--neutral-color-100);
-  }
+    &-name {
+      font-weight: 600;
+      line-height: 1.4;
+      color: var(--neutral-color-100);
+    }
 
-  &-profession {
-    font-weight: 500;
-    line-height: 1.6;
-    color: var(--neutral-color-150);
-  }
+    &-profession {
+      font-weight: 500;
+      line-height: 1.6;
+      color: var(--neutral-color-150);
+    }
 
-  &-date {
-    font-weight: 500;
-    line-height: 1.5;
-    color: var(--neutral-color-150);
+    &-date {
+      font-weight: 500;
+      line-height: 1.5;
+      color: var(--neutral-color-150);
+    }
   }
 
   &__img {
