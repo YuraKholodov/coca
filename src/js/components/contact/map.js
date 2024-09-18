@@ -81,7 +81,7 @@ export async function initMap() {
   // Создание маркера
   const el = document.createElement("img");
   el.className = "my-marker";
-  el.src = "./../../../img/svgicons/marker.svg";
+  el.src = "./img/svgicons/marker.svg";
   el.title = "Маркер";
 
   // Создание заголовка маркера
