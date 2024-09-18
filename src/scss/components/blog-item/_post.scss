@@ -1,0 +1,144 @@
+.post {
+  padding: 80px 0 160px;
+  background-color: var(--neutral-color-10);
+
+  @include small-tablet {
+    padding: 40px 0 80px;
+  }
+
+  &__title {
+    max-width: 970px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+    margin-bottom: 48px;
+  }
+
+  &__author {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    &-left {
+      display: flex;
+      align-items: center;
+      gap: 0 24px;
+    }
+
+    &-img {
+      width: 56px;
+      height: 56px;
+    }
+  }
+
+  &-name {
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--neutral-color-100);
+  }
+
+  &-profession {
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--neutral-color-150);
+  }
+
+  &-date {
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--neutral-color-150);
+  }
+
+  &__img {
+    max-height: 545px;
+    width: 100%;
+    margin-bottom: 80px;
+  }
+
+  &__descr {
+    &-text {
+      font-weight: 400;
+      line-height: 1.8;
+      color: var(--neutral-color-100);
+      margin-bottom: 56px;
+    }
+
+    &-title {
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--neutral-color-100);
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.author__article {
+  display: flex;
+  gap: 50px 48px;
+
+  @include small-tablet {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &-descr {
+    max-width: 645px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  &-writen {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--neutral-color-150);
+  }
+
+  &-name {
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.03em;
+    color: var(--neutral-color-100);
+  }
+
+  &-profession {
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--neutral-color-150);
+  }
+}
+
+.author__social {
+  &-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px 32px;
+  }
+
+  &-item {
+    flex-shrink: 0;
+  }
+
+  &-link {
+    svg {
+      path {
+        fill: var(--neutral-color-100);
+      }
+    }
+  }
+}

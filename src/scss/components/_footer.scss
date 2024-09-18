@@ -1,7 +1,7 @@
 .footer {
   color: #fff;
   padding: 112px 0 58px;
-  background-color: #1d1e25;
+  background-color: var(--neutral-color-60);
 
   @include mobile {
     padding: 70px 0 30px;
